@@ -1,5 +1,5 @@
 # ipfs-browser
-https://saikiran1106.github.io/ipfs-browser/
+https://vivekpothannagari.github.io/ipfs-browser/
 
 Welcome to the ipfs-browser! This simple web page allows users to interact with the InterPlanetary File System (IPFS) by providing an IPFS hash value. The web page fetches the content associated with the provided hash from the IPFS network and displays it to the user.
 
