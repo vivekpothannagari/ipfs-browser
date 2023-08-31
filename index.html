@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPFS Browser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 80%;
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>IPFS Browser</h2>
+        <input type="text" id="hashInput" placeholder="Enter IPFS hash value">
+        <button onclick="openIPFS()">Submit</button>
+    </div>
+
+    <script>
+        function openIPFS() {
+            const hashInput = document.getElementById('hashInput').value;
+
+            if (hashInput.trim() === '') {
+                return;
+            }
+
+            const ipfsURL = `https://ipfs.io/ipfs/${hashInput}`;
+
+            window.open(ipfsURL, '_blank');
+        }
+    </script>
+</body>
+
+</html>
